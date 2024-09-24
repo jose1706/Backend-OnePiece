@@ -1,0 +1,30 @@
+### Recuperar todas las frutas del diablo
+GET http://localhost:1234/devilfruits
+
+### Recuperar una fruta del diablo por id
+GET http://localhost:1234/devilfruits/3
+
+
+### Crear una fruta del diablo con POST
+POST http://localhost:1234/devilfruits
+Content-Type: application/json
+
+{
+    "name": "Ito Ito no Mi",
+    "image": "https://ih1.redbubble.net/image.1665161227.2240/st,small,507x507-pad,600x600,f8f8f8.jpg",
+    "description": "Permite a quien la consuma generar y manipular los hilos, transformándolo en un humano hilo.",
+    "type": " Paramecia ",
+    "user": " Donquixote Doflamingo"
+}
+
+### Actualizar una fruta
+PATCH http://localhost:1234/devilfruits/3
+Content-Type: application/json
+
+{
+  "name": "Updated Devil Fruit Name",
+  "description": "convierte el usuario en un hombre de hielo"
+}
+
+### Borrar frutas
+DELETE http://localhost:1234/devilfruits/613

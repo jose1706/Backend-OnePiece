@@ -1,0 +1,21 @@
+[
+    {
+      "id": 236,
+      "username": "joseg",
+      "password": "123456",
+      "email": "jogallegoz@unal.edu.co"
+    },
+    {
+      "id": 563,
+      "username": "admin",
+      "password": "admin123",
+      "email": "admin@unal.edu.co"
+    },
+    {
+      "id": 156,
+      "username": "user",
+      "password": "1",
+      "email": "user1@unal.edu.co"
+    }
+  ]
+  

@@ -1,0 +1,27 @@
+### obtener todos los usuarios
+GET http://localhost:1234/users
+
+### obtener un usuario por ID
+GET http://localhost:1234/users/712
+
+
+### crear un nuevo usuario
+POST http://localhost:1234/users
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "123456",
+  "email": "jose5@example.com"
+}
+
+
+### actualizar un usuario
+
+PATCH http://localhost:1234/users/712
+Content-Type: application/json
+
+{
+  "password": "pass1",
+  "email": "updated2@example.com"
+}
