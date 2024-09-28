@@ -20,7 +20,8 @@ CREATE TABLE devilFruits (
     image TEXT,
     description TEXT NOT NULL,
     type VARCHAR(255) NOT NULL,
-    user VARCHAR(255) NOT NULL
+    user VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL
 );
 
 -- Crear la tabla users
@@ -37,16 +38,16 @@ CREATE TABLE users (
 );
 
 -- Insertar algunos datos iniciales en la tabla devilFruits
-INSERT INTO devilFruits (id, name, image, description, type, user) VALUES
-(1, 'Gomu Gomu no Mi', 'https://ih1.redbubble.net/image.1680165166.7719/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Convierte al usuario en un hombre de goma.', 'Paramecia', 'Monkey D. Luffy'),
-(2, 'Yami Yami no Mi', 'https://ih1.redbubble.net/image.3560082174.3582/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Permite al usuario manipular y controlar la oscuridad.', 'Logia', 'Marshall D. Teach'),
-(3, 'Hie Hie no Mi', 'https://i.redd.it/u9ohlkbh4e271.jpg', 'Convierte al usuario en un hombre hielo y le permite manipular el hielo.', 'Logia', 'Aokiji'),
-(4, 'Tori Tori no Mi, Modelo: Fénix', 'https://ih1.redbubble.net/image.5537774982.4152/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Permite al usuario transformarse en un fénix y regenerarse de cualquier herida.', 'Zoan Mítica', 'Marco el fenix'),
-(5, 'Ope Ope no Mi', 'https://ih1.redbubble.net/image.5437225723.1673/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Permite al usuario manipular los órganos internos propios y ajenos.', 'Paramecia', 'Trafalgar D. Water Law'),
-(6, 'Bara Bara no Mi', 'https://ih1.redbubble.net/image.3560030179.2336/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Permite al usuario separar y controlar cualquier parte de su cuerpo.', 'Paramecia', 'Buggy'),
-(7, 'Mera Mera no Mi', 'https://ih1.redbubble.net/image.2510814180.7203/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Convierte al usuario en un hombre fuego y le permite manipular el fuego.', 'Logia', 'Sabo'),
-(8, 'Soru Soru no Mi', 'https://pm1.aminoapps.com/6670/ba764b85f6d9548d6e6ebc1634a54a0909ea8041_00.jpg', 'Permite al usuario manipular las almas de las personas.', 'Paramecia', 'Big Mom'),
-(9, 'Goro Goro no Mi', 'https://ih1.redbubble.net/image.5438261584.3422/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Convierte al usuario en un hombre rayo y le permite manipular la electricidad.', 'Logia', 'Enel');
+INSERT INTO devilFruits (id, name, image, description, type, user, author) VALUES
+(1, 'Gomu Gomu no Mi', 'https://ih1.redbubble.net/image.1680165166.7719/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Convierte al usuario en un hombre de goma.', 'Paramecia', 'Monkey D. Luffy', 'Desconocido'),
+(2, 'Yami Yami no Mi', 'https://ih1.redbubble.net/image.3560082174.3582/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Permite al usuario manipular y controlar la oscuridad.', 'Logia', 'Marshall D. Teach', 'Desconocido'),
+(3, 'Hie Hie no Mi', 'https://i.redd.it/u9ohlkbh4e271.jpg', 'Convierte al usuario en un hombre hielo y le permite manipular el hielo.', 'Logia', 'Aokiji', 'Desconocido'),
+(4, 'Tori Tori no Mi, Modelo: Fénix', 'https://ih1.redbubble.net/image.5537774982.4152/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Permite al usuario transformarse en un fénix y regenerarse de cualquier herida.', 'Zoan Mítica', 'Marco el fenix', 'Desconocido'),
+(5, 'Ope Ope no Mi', 'https://ih1.redbubble.net/image.5437225723.1673/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Permite al usuario manipular los órganos internos propios y ajenos.', 'Paramecia', 'Trafalgar D. Water Law', 'Desconocido'),
+(6, 'Bara Bara no Mi', 'https://ih1.redbubble.net/image.3560030179.2336/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Permite al usuario separar y controlar cualquier parte de su cuerpo.', 'Paramecia', 'Buggy', 'Desconocido'),
+(7, 'Mera Mera no Mi', 'https://ih1.redbubble.net/image.2510814180.7203/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Convierte al usuario en un hombre fuego y le permite manipular el fuego.', 'Logia', 'Sabo', 'Desconocido'),
+(8, 'Soru Soru no Mi', 'https://pm1.aminoapps.com/6670/ba764b85f6d9548d6e6ebc1634a54a0909ea8041_00.jpg', 'Permite al usuario manipular las almas de las personas.', 'Paramecia', 'Big Mom', 'Desconocido'),
+(9, 'Goro Goro no Mi', 'https://ih1.redbubble.net/image.5438261584.3422/st,small,507x507-pad,600x600,f8f8f8.jpg', 'Convierte al usuario en un hombre rayo y le permite manipular la electricidad.', 'Logia', 'Enel', 'Desconocido');
 
 -- Insertar algunos datos iniciales en la tabla users
 INSERT INTO users (id, username, password, email) VALUES
@@ -55,7 +56,7 @@ INSERT INTO users (id, username, password, email) VALUES
 (156, 'user', '1', 'user1@unal.edu.co');
 
 -- Consultar todas las frutas del diablo
-SELECT id, name, image, description, type, user FROM devilFruits;
+SELECT id, name, image, description, type, user, author FROM devilFruits;
 
 -- Consultar todos los usuariosdevilfruits
 SELECT username, email, id, password FROM users;

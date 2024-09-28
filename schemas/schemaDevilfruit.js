@@ -20,6 +20,10 @@ const devilFruitSchema = z.object({
   user: z.string({
     invalid_type_error: 'User must be a string',
     required_error: 'User is required'
+  }),
+  author: z.string({
+    invalid_type_error: 'User must be a string',
+    required_error: 'User is required'
   })
 });
 
